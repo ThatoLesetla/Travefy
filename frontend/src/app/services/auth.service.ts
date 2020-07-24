@@ -18,16 +18,21 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(email: string, password: string) {
-    this.http.post(`${environment.url}/login`, {email: email, pass: password}).pipe(
+    this.http.post<any>(`${environment.url}/login`, {email: email, pass: password}).pipe(
       map(user => {
         // login successful if there's a jwt token in response
         if (user && user.access_token) {
           // store user details and jwt token in local storage to keep user logged in
-          localStorage.setItem('currentUser', JSON.stringify(user.access_token));
+          localStorage.setItem('token', JSON.stringify(user.access_token));
           this.isLoggedIn = true;         // set user login status
         }
         return user;
       })
     );
+  }
+
+
+  public getToken() {
+    return localStorage.getItem('token');
   }
 }
