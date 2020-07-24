@@ -1,0 +1,90 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card card-plain">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Material Design Icons</h4>
+                <button class="btn btn-primary" (click)="openDialog()">Add Package</button>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <th>
+                                    Code
+                                </th>
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Location
+                                </th>
+                                <th>
+                                    Hotel
+                                </th>
+                                <th>
+                                    Duration
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    Currency
+                                </th>
+                                <th>
+                                    FlightNo
+                                </th>
+                                <th>
+                                    Transportation
+                                </th>
+                                <th>
+                                    Discount Amount
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let package of packages">
+                                    <td>
+                                        {{ package.id }}
+                                    </td>
+                                    <td>
+                                        {{ package.title }}
+                                    </td>
+                                    <td>
+                                        {{ package.description }}
+                                    </td>
+                                    <td>
+                                        {{ package.location }}
+                                    </td>
+                                    <td>
+                                        {{ package.hotelID }}
+                                    </td>
+                                    <td>
+                                        {{ package.duration }}
+                                    </td>
+                                    <td>
+                                        {{ package.price }}
+                                    </td>
+                                    <td>
+                                        {{ package.currency }}
+                                    </td>
+                                    <td>
+                                        {{ package.flightID }}
+                                    </td>
+                                    <td>
+                                        {{ package.transportationID }}
+                                    </td>
+                                    <td>
+                                        {{ package.discountAmnt }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

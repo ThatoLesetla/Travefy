@@ -1,0 +1,25 @@
+<!--Card-->
+<div class="card card-height">
+
+    <!--Card image-->
+    <div class="view overlay">
+        <img src="{{ department.imageURL }}" class="card-img-top" alt="">
+        <a href="https://mdbootstrap.com/education/tech-marketing/automated-app-introduction/" target="_blank">
+            <div class="mask rgba-white-slight"></div>
+        </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">{{ department.deptName }}</h4>
+        <!--Text-->
+        <p class="card-text">{{ department.deptBio }}
+        </p>
+        <a [routerLink]="['/services']" class="btn btn-primary btn-md">View
+      <i class="fas fa-search ml-2"></i>
+    </a>
+    </div>
+
+</div>
+<!--/.Card-->

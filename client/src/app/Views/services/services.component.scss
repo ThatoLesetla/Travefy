@@ -1,0 +1,32 @@
+       /* TEMPLATE STYLES */
+       
+       main {
+           padding-top: 3rem;
+           padding-bottom: 2rem;
+       }
+       
+       .extra-margins {
+           margin-top: 1rem;
+           margin-bottom: 2.5rem;
+       }
+       
+       .jumbotron {
+           text-align: center;
+       }
+       
+       .navbar {
+           background-color: #3b295a;
+       }
+       
+       footer.page-footer {
+           background-color: #3b295a;
+           margin-top: 2rem;
+       }
+       
+       .navbar .btn-group .dropdown-menu a:hover {
+           color: #000 !important;
+       }
+       
+       .navbar .btn-group .dropdown-menu a:active {
+           color: #fff !important;
+       }

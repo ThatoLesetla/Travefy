@@ -1,0 +1,57 @@
+<!--Main layout-->
+<main class="mt-5 pt-5">
+    <div class="container">
+
+        <!--Section: Jumbotron-->
+        <section class="card wow fadeIn" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+
+            <!-- Content -->
+            <div class="card-body text-white text-center py-5 px-5 my-5">
+
+                <h1 class="mb-4">
+                    <strong>Book domestic worker with FindUpon</strong>
+                </h1>
+                <p>
+                    <strong>Best Cleaning & domestic services</strong>
+                </p>
+                <p class="mb-4">
+                    <strong>The most comprehensive marketplace for domestic services. Loved by over 500 000 users. Video and written
+            versions available. Create your own, stunning website.</strong>
+                </p>
+                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Request domestic worker
+          <i class="fas fa-graduation-cap ml-2"></i>
+        </a>
+
+            </div>
+            <!-- Content -->
+        </section>
+        <!--Section: Jumbotron-->
+
+        <hr class="my-5">
+
+        <!--Section: Cards-->
+        <section class="text-center">
+
+            <!--Grid row-->
+            <div class="row mb-4 wow fadeIn">
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4" *ngFor="let department of departments">
+
+                    <app-job-cards [department]="department"></app-job-cards>
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+
+
+
+        </section>
+        <!--Section: Cards-->
+
+    </div>
+</main>
+<!--Main layout-->

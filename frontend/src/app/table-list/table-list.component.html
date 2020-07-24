@@ -1,0 +1,98 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Clients</h4>
+                        <p class="card-category">List of Clients</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ClientID
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Surname
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Phone
+                                    </th>
+                                    <th>Action</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let client of clients">
+                                        <td>
+                                            {{ client.clientID }}
+                                        </td>
+                                        <td>
+                                            {{ client.name }}
+                                        </td>
+                                        <td>
+                                            {{ client.surname }}
+                                        </td>
+                                        <td>
+                                            {{ client.email }}
+                                        </td>
+                                        <td class="text-primary">
+                                            <a href="tel:+{{client.phone}}" class="btn btn-success">Call</a>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary " (click)="openEditDialogBox(client) ">Edit</button>
+                                            <button class="btn btn-danger " (click)="openDialog(client.clientID) ">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="card card-plain ">
+                    <div class="card-header card-header-danger ">
+                        <h4 class="card-title mt-0 ">Client Bookings</h4>
+                        <p class="card-category ">List of client bookings for the past 5 months</p>
+                    </div>
+                    <div class="card-body ">
+                        <div class="table-responsive ">
+                            <table class="table table-hover ">
+                                <thead class=" ">
+                                    <th>
+                                        Start Date
+                                    </th>
+                                    <th>
+                                        End Date
+                                    </th>
+                                    <th>
+                                        Client ID
+                                    </th>
+                                    <th>
+                                        Package ID
+                                    </th>
+                                    <th>
+                                        Flight ID
+                                    </th>
+                                    <th>
+                                        Hotel ID
+                                    </th>
+                                    <th>Action</th>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

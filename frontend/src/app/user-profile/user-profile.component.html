@@ -1,0 +1,146 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Reservations</h4>
+                        <p class="card-category">Complete client booking</p>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="clientProfile" (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
+                                        <div *ngIf="name.errors.required">
+                                            Name is required.
+                                        </div>
+                                    </div>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Fist Name" type="text" formControlName="name" required>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <div *ngIf="surname.invalid && (surname.dirty || surname.touched)" class="text-danger">
+                                        <div *ngIf="surname.errors.required">
+                                            Surname is required.
+                                        </div>
+                                    </div>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Surname" type="text" formControlName="surname" required>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="text-danger">
+                                        <div *ngIf="phone.errors.required">
+                                            Phone number is required.
+                                        </div>
+                                        <div *ngIf="phone.errors.maxlength">
+                                            Phone number must be not more than 10 digits
+                                        </div>
+                                        <div *ngIf="phone.errors.maxlength">
+                                            Phone number must be at least 10 digits
+                                        </div>
+                                    </div>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Phone" formControlName="phone" required>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                                        <div *ngIf="email.errors.required">
+                                            E-Mail address is required.
+                                        </div>
+                                        <div *ngIf="email.errors.email">
+                                            Invalid E-Mail address
+                                        </div>
+                                    </div>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Email address" type="email" formControlName="email" required>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div *ngIf="address.invalid && (address.dirty || address.touched)" class="text-danger">
+                                        <div *ngIf="address.errors.required">
+                                            Address is required.
+                                        </div>
+                                    </div>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Adress" type="text" formControlName="address" required>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div *ngIf="city.invalid && (city.dirty || city.touched)" class="text-danger">
+                                        <div *ngIf="city.errors.required">
+                                            City is required.
+                                        </div>
+                                    </div>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="City" type="text" formControlName="city" required>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <div *ngIf="postalCode.invalid && (name.dirty || postalCode.touched)" class="text-danger">
+                                        <div *ngIf="postalCode.errors.required">
+                                            Postal Code is required.
+                                        </div>
+                                        <div *ngIf="name.errors.maxlength">
+                                            postal Code must be at not more than 4 digits
+                                        </div>
+                                        <div *ngIf="name.errors.maxlength">
+                                            Postal Code must be at least 4 digits
+                                        </div>
+                                    </div>
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Postal Code" type="text" formControlName="postalCode" required>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <!--                      <div class="row">
+                                <div class="col-md-12">
+                                    <label>About Me</label>
+                                    <mat-form-field class="example-full-width">
+                                        <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
+                                    </mat-form-field>
+                                     <div class="form-group">
+
+                                      <div class="form-group">
+                                          <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                                          <textarea class="form-control" rows="5"></textarea>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div> -->
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Next</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--  <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="javascript:void(0)">
+                            <img class="img" src="./assets/img/faces/marc.jpg" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                        <h4 class="card-title">Alec Thompson</h4>
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="javascript:void(0)" class="btn btn-danger btn-round">Follow</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
