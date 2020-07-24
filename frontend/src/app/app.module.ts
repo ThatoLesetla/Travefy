@@ -47,7 +47,7 @@ import { PackageEditModalComponent } from './views/travel-package/package-edit-m
     AdminLayoutComponent,
     DialogEditClientComponent,
     HotelsComponent,
-    PackageEditModalComponent
+    PackageEditModalComponent,
 
   ],
   providers: [],

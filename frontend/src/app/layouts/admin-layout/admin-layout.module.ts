@@ -21,6 +21,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { ClientModule } from '../../table-list/client.module';
 import { HomeComponent } from '../../views/home/home.component';
+import { LoginComponent } from '../../views/login/login.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -45,7 +46,8 @@ import { HomeComponent } from '../../views/home/home.component';
     UpgradeComponent,
     HomeComponent,
     AdminManagerComponent,
-    TravelPackageComponent
+    TravelPackageComponent,
+    LoginComponent
   ]
 })
 
