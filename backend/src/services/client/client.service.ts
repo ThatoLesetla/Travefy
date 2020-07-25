@@ -29,4 +29,8 @@ export class ClientService {
     async update(id: string, client: Client): Promise<Client> {
         return await this.clientRepository.save(client);
     }
+
+    async findByEmail(clientEmail: string): Promise<any> {
+        return await this.clientRepository.find({ where: { email: clientEmail}});
+    }
 }

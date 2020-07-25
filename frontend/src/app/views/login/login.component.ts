@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   emailErrorMsg = false;     // shows a error message if the username is empty
   passErrorMsg = false;        // shows a error message if the password is empty
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -35,7 +35,11 @@ export class LoginComponent implements OnInit {
     }
 
     if (this.userEmail != null && this.password != null) {
-
+        this.authService.login(this.userEmail, this.password).subscribe(data => {
+          this.router.navigate(['/dashboard']);
+        }, error => {
+          
+        })
     }
   }
 }

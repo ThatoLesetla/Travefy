@@ -10,6 +10,8 @@ import { Connection } from 'typeorm';
 
 import { Client } from './models/entities/client.entity';
 import { Packages } from './models/entities/package.entity';
+import { AuthModule } from './auth/auth/auth.module';
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -18,16 +20,18 @@ import { Packages } from './models/entities/package.entity';
       port: 3306,
       username: 'root',
       password: '',
-      database: 'findupon',
+      database: 'travefy',
       entities: [Client, Packages],
       synchronize: true,
     }),
     ClientsModule,
-    PackageModule
+    PackageModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],
 })
+
 export class AppModule {
   constructor(private connection: Connection) {}
 }

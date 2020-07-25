@@ -26,6 +26,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { DialogEditClientComponent } from './modals/dialog-edit-client/dialog-edit-client.component';
 import { HotelsComponent } from './views/hotels/hotels.component';
 import { PackageEditModalComponent } from './views/travel-package/package-edit-modal/package-edit-modal.component';
+import { LoginModalComponent } from './views/login/login-modal/login-modal.component';
 
 @NgModule({
   imports: [
@@ -48,6 +49,7 @@ import { PackageEditModalComponent } from './views/travel-package/package-edit-m
     DialogEditClientComponent,
     HotelsComponent,
     PackageEditModalComponent,
+    LoginModalComponent,
 
   ],
   providers: [],

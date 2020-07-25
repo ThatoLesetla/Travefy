@@ -18,7 +18,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(email: string, password: string) {
-    this.http.post<any>(`${environment.url}/login`, {email: email, pass: password}).pipe(
+    return this.http.post<any>(`${environment.url}/login`, {email: email, pass: password}).pipe(
       map(user => {
         // login successful if there's a jwt token in response
         if (user && user.access_token) {
